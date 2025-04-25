@@ -12,15 +12,26 @@ import TelaCatalogo from './screens/TelaCatalogo';
 import TelaRecursos from './screens/TelaRecursos';
 import TelaContato from './screens/TelaContato';
 import TelaDesenvolvedores from './screens/TelaDesenvolvedores';
+import TelaDetalhes from './screens/TelaDetalhes';
 
 const Drawer = createDrawerNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Drawer.Navigator initialRouteName="Home">
+      <Drawer.Navigator
+        initialRouteName="Home"
+        screenOptions={{
+          headerStyle: { backgroundColor: '#FFA500' }, // Fundo do cabeçalho em laranja médio
+          headerTintColor: '#FFF', // Texto do cabeçalho em branco
+          drawerStyle: { backgroundColor: '#FFF7E5' }, // Fundo do menu hambúrguer em tom suave de laranja
+          drawerActiveTintColor: '#FFA500', // Item ativo no menu em laranja médio
+          drawerInactiveTintColor: '#555', // Item inativo no menu com tom neutro
+        }}
+      >
         <Drawer.Screen name="Home" component={TelaInicial} options={{ title: 'Início' }} />
         <Drawer.Screen name="Catálogo" component={TelaCatalogo} options={{ title: 'Catálogo de Livros' }} />
+        <Drawer.Screen name="Detalhes" component={TelaDetalhes} />
         <Drawer.Screen name="Recursos" component={TelaRecursos} options={{ title: 'Recursos Educativos' }} />
         <Drawer.Screen name="Contato" component={TelaContato} options={{ title: 'Fale Conosco' }} />
         <Drawer.Screen name="Desenvolvedores" component={TelaDesenvolvedores} options={{ title: 'Desenvolvedores' }} />

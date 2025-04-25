@@ -55,7 +55,7 @@ const TelaCatalogo = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F8F9FA',
+    backgroundColor: '#FFF7E5', // Fundo com tom suave para combinar com laranja
     padding: 20,
   },
   titulo: {
@@ -63,9 +63,10 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
     marginBottom: 20,
+    color: '#333', // Laranja mais escuro para destaque no título
   },
   item: {
-    backgroundColor: '#FFF',
+    backgroundColor: '#FFE4B5', // Fundo dos itens com tom pastel de laranja
     borderRadius: 10,
     padding: 15,
     marginBottom: 15,
@@ -78,27 +79,30 @@ const styles = StyleSheet.create({
     width: 100,
     height: 150,
     marginBottom: 10,
+    borderRadius: 5,
   },
   nomeLivro: {
     fontSize: 18,
     fontWeight: 'bold',
+    color: '#FF4500', // Tom de laranja vibrante para o nome do livro
   },
   autor: {
     fontSize: 14,
-    color: '#555',
+    color: '#555', // Mantém o tom neutro para o autor
     marginBottom: 10,
   },
   botao: {
-    backgroundColor: '#007BFF',
+    backgroundColor: '#FFA500', // Laranja médio para o botão
     padding: 10,
     borderRadius: 5,
     alignItems: 'center',
   },
   textoBotao: {
-    color: '#FFF',
+    color: '#FFF', // Texto branco no botão para contraste
     fontWeight: 'bold',
     fontSize: 16,
   },
 });
+
 
 export default TelaCatalogo;

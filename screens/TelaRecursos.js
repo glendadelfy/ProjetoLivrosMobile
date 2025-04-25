@@ -1,5 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity, Linking } from 'react-native';
+import livroImagem from '../src/images/livros-leitura.jpeg'; // Importando a imagem local
+import livroImagemB from '../src/images/livros-online-images.jpeg'; // Importando a imagem local
 
 const TelaRecursos = () => {
   const abrirLink = (url) => {
@@ -12,7 +14,7 @@ const TelaRecursos = () => {
       <View style={styles.recurso}>
         <Image
           style={styles.imagem}
-          source={{ uri: 'https://via.placeholder.com/150' }} // Substitua pelo link de uma imagem relevante
+          source={livroImagem} // Usando a imagem local
         />
         <Text style={styles.texto}>Iniciativa de Leitura Inclusiva</Text>
         <TouchableOpacity
@@ -24,9 +26,9 @@ const TelaRecursos = () => {
       </View>
 
       <View style={styles.recurso}>
-        <Image
+      <Image
           style={styles.imagem}
-          source={{ uri: 'https://via.placeholder.com/150' }} // Substitua pelo link de uma imagem relevante
+          source={livroImagemB} // Usando a imagem local
         />
         <Text style={styles.texto}>Livros Gratuitos Online</Text>
         <TouchableOpacity
@@ -43,7 +45,7 @@ const TelaRecursos = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F8F9FA',
+    backgroundColor: '#FFF7E5', // Fundo suave para combinar com o laranja médio
     padding: 20,
   },
   titulo: {
@@ -51,9 +53,10 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
     marginBottom: 20,
+    color: '#333', // Laranja médio escuro para destacar o título
   },
   recurso: {
-    backgroundColor: '#FFF',
+    backgroundColor: '#FFE4B5', // Fundo dos recursos com tom pastel de laranja
     borderRadius: 10,
     padding: 15,
     marginBottom: 15,
@@ -67,20 +70,22 @@ const styles = StyleSheet.create({
     width: 100,
     height: 100,
     marginBottom: 10,
+    borderRadius: 5,
   },
   texto: {
     fontSize: 18,
     fontWeight: 'bold',
     textAlign: 'center',
     marginBottom: 10,
+    color: '#333', // Laranja vibrante para os textos dos recursos
   },
   botao: {
-    backgroundColor: '#007BFF',
+    backgroundColor: '#FFA500', // Laranja médio para os botões
     padding: 10,
     borderRadius: 5,
   },
   textoBotao: {
-    color: '#FFF',
+    color: '#FFF', // Texto branco para contraste
     fontWeight: 'bold',
     fontSize: 16,
   },

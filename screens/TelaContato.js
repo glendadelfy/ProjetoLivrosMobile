@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button, StyleSheet, Alert } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert } from 'react-native';
 
 const TelaContato = () => {
   const [nome, setNome] = useState('');
@@ -35,13 +35,15 @@ const TelaContato = () => {
       />
       <TextInput
         style={[styles.input, styles.textArea]}
-        placeholder="Digite sua mensagem"
+        placeholder="Digite sua mensagem. Avalie o App!"
         value={mensagem}
         onChangeText={(text) => setMensagem(text)}
         multiline
         numberOfLines={4}
       />
-      <Button title="Enviar" onPress={enviarFormulario} />
+      <TouchableOpacity style={styles.botao} onPress={enviarFormulario}>
+        <Text style={styles.textoBotao}>Enviar</Text>
+      </TouchableOpacity>
     </View>
   );
 };
@@ -49,7 +51,7 @@ const TelaContato = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F8F9FA',
+    backgroundColor: '#FFF7E5', // Fundo suave para harmonizar com o laranja
     padding: 20,
     justifyContent: 'center',
   },
@@ -58,19 +60,40 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: 20,
     textAlign: 'center',
+    color: '#333', // Laranja médio escuro para destaque no título
   },
   input: {
     borderWidth: 1,
-    borderColor: '#CCC',
+    borderColor: '#FFB347', // Laranja claro nas bordas do input
     borderRadius: 5,
     padding: 10,
     marginBottom: 10,
-    backgroundColor: '#FFF',
+    backgroundColor: '#FFF5E0', // Fundo do input com tom suave
+    color: '#333', // Texto escuro para legibilidade
   },
   textArea: {
     height: 100,
     textAlignVertical: 'top',
+    borderWidth: 1,
+    borderColor: '#FFB347', // Mantendo o tom claro
+    borderRadius: 5,
+    padding: 10,
+    backgroundColor: '#FFF5E0', // Mesmo fundo do input normal
+    color: '#333',
+    marginBottom: 10,
+  },
+  botao: {
+    backgroundColor: '#FFA500', // Laranja médio no botão de enviar
+    padding: 15,
+    borderRadius: 5,
+    alignItems: 'center',
+  },
+  textoBotao: {
+    color: '#FFF', // Texto branco para contraste
+    fontWeight: 'bold',
+    fontSize: 16,
   },
 });
+
 
 export default TelaContato;

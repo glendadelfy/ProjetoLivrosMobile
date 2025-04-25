@@ -18,6 +18,10 @@ const TelaInicial = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.titulo}>Inclusão Social de Leitura</Text>
+      {/* Adicionando o texto sobre a importância da leitura */}
+      <Text style={styles.textoImportancia}>
+      Este aplicativo foi criado para promover a inclusão social através da leitura, tornando o acesso aos livros mais fácil e acessível para todos. Com ele, você pode descobrir obras de diversos autores, explorar catálogos, buscar livros específicos e encontrar histórias que enriquecem a mente e a alma
+      </Text>
       <TextInput
         style={styles.input}
         placeholder="Busque um livro ou autor"
@@ -52,7 +56,7 @@ const TelaInicial = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F8F9FA',
+    backgroundColor: '#FFF7E5', // Fundo com tom suave para combinar com laranja
     padding: 20,
   },
   titulo: {
@@ -60,28 +64,36 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: 20,
     textAlign: 'center',
+    color: '#000', // Laranja médio no título
+  },
+  textoImportancia: {
+    fontSize: 16,
+    textAlign: 'justify', // Alinha o texto para melhor legibilidade
+    color: '#333', // Um tom neutro para contraste
+    marginBottom: 20,
   },
   input: {
     borderWidth: 1,
-    borderColor: '#CCC',
+    borderColor: '#FFB347', // Bordas com tom claro de laranja
     borderRadius: 5,
     padding: 10,
     marginBottom: 10,
+    backgroundColor: '#FFF5E0', // Fundo do input com tom suave
   },
   botao: {
-    backgroundColor: '#007BFF',
+    backgroundColor: '#FFA500', // Laranja médio
     padding: 15,
     borderRadius: 5,
     alignItems: 'center',
     marginBottom: 20,
   },
   textoBotao: {
-    color: '#FFF',
+    color: '#FFF', // Texto branco no botão para contraste
     fontWeight: 'bold',
     fontSize: 16,
   },
   item: {
-    backgroundColor: '#FFF',
+    backgroundColor: '#FFE4B5', // Fundo dos itens com tom pastel de laranja
     borderRadius: 10,
     padding: 15,
     marginBottom: 15,
@@ -94,15 +106,18 @@ const styles = StyleSheet.create({
     width: 100,
     height: 150,
     marginBottom: 10,
+    borderRadius: 5,
   },
   nomeLivro: {
     fontSize: 18,
     fontWeight: 'bold',
+    color: '#FF8C00', // Nome do livro em laranja médio
   },
   autor: {
     fontSize: 14,
-    color: '#555',
+    color: '#555', // Tom neutro para o autor
   },
 });
+
 
 export default TelaInicial;
